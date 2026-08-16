@@ -37,7 +37,7 @@ gem "image_processing", "~> 1.2"
 
 gem "simple_command"
 gem "dotenv-rails"
-gem "redis", "~> 5.0"
+gem "redis", "~> 6.0"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
