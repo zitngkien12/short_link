@@ -1,0 +1,45 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/encode":
+    post:
+      summary: Encodes a URL to a shortened URL
+      tags:
+      - Shortened URLs
+      parameters:
+      - name: url
+        in: query
+        required: true
+        description: Original URL to shorten
+        schema:
+          type: string
+      responses:
+        '200':
+          description: successful
+        '422':
+          description: invalid URL
+  "/decode":
+    post:
+      summary: Decodes a shortened URL to its original URL
+      tags:
+      - Shortened URLs
+      parameters:
+      - name: short_url
+        in: query
+        required: true
+        description: Shortened URL to decode
+        schema:
+          type: string
+      responses:
+        '200':
+          description: successful
+        '404':
+          description: not found
+servers:
+- url: "{defaultHost}"
+  variables:
+    defaultHost:
+      default: https://short-link-demo.onrender.com

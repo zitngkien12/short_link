@@ -1,0 +1,7 @@
+one:
+  original_url: "https://example.com/alpha"
+  short_code: "alpha1"
+
+two:
+  original_url: "https://example.com/beta"
+  short_code: "beta2"
